@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Model\Images\imagesn2.jpg" />
+    <None Remove="Model\Images\imagesn3.jpg" />
+    <None Remove="Model\Images\new20.jpg" />
+    <None Remove="Model\Images\new21.png" />
+    <None Remove="Model\Images\prof1.png" />
+    <None Remove="Model\Images\wel9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Model\Images\new20.jpg" />
+    <Resource Include="Model\Images\new21.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Model\Images\imagesn2.jpg" />
+    <Resource Include="Model\Images\imagesn3.jpg" />
+    <Resource Include="Model\Images\prof1.png" />
+    <Resource Include="Model\Images\wel9.jpg" />
+  </ItemGroup>
+
+</Project>

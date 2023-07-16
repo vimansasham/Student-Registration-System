@@ -1,0 +1,70 @@
+﻿<Window x:Class="EG4214.UserInterface"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EG4214"
+        mc:Ignorable="d"
+        Title="{Binding Title,UpdateSourceTrigger=PropertyChanged}" Height="550" Width="821">
+    <Window.DataContext>
+        <local:UserInterfaceVM/>
+    </Window.DataContext>
+    <Grid Margin="0,-21,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="687"/>
+            <ColumnDefinition Width="207"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/Model/Images/new21.png" Margin="376,-180,-162,-67" Grid.ColumnSpan="3" Grid.RowSpan="4" />
+
+
+
+        <StackPanel
+            Width="277" Height="457" Background="Transparent" HorizontalAlignment="Left"
+            VerticalAlignment="Top" Orientation="Vertical" Margin="431,46,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2">
+
+            <TextBlock Margin="6 10 50 0" FontSize="18" FontWeight="Bold" Foreground="Black" TextAlignment="Center" Text="{Binding Title,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" Width="200"/>
+            <TextBlock FontSize="16" FontWeight="SemiBold" Text="First Name :" Margin="7"/>
+            <TextBox Text="{Binding Fname, UpdateSourceTrigger=PropertyChanged}" Margin="7" Width="300" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock FontSize="16" FontWeight="SemiBold" Text="Last Name :" Margin="7" Grid.Row="1"/>
+            <TextBox Text="{Binding Lname, UpdateSourceTrigger=PropertyChanged}" Margin="7" Width="300" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock FontSize="16" FontWeight="SemiBold" Text="Age :" Margin="7" Grid.Row="1"/>
+            <TextBox Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" Margin="7" Width="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock FontSize="16" FontWeight="SemiBold" Text="Date of Birth :" Margin="7" Grid.Row="1"/>
+            <TextBox Text="{Binding Dateofbirth, UpdateSourceTrigger=PropertyChanged}" Margin="7" Width="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBlock FontSize="16" FontWeight="SemiBold" Text="GPA :" Margin="7" Grid.Row="1"/>
+            <TextBox Text="{Binding Gpa, UpdateSourceTrigger=PropertyChanged}" Margin="5"  Width="80" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"/>
+            <Button Content="Insert picture" FontWeight="SemiBold"  HorizontalAlignment="Left" Command="{Binding UploadPhotoCommand}" Margin="5,10,10,-60" Grid.Row="3" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Style="{StaticResource insertbtn}"/>
+            <Image Height="80" HorizontalAlignment="Left" Width="80" VerticalAlignment="Top" Margin="150 12 0 0" Source="{Binding Image,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Button Content="Save" Command="{Binding SaveCommand}" FontWeight="SemiBold" Grid.Row="3" Margin="0 -55 -200 50" Grid.ColumnSpan="2" Width="68" Style="{StaticResource primarybuttons}" Height="40"/>
+
+        </StackPanel>
+
+        <StackPanel Width="568" Margin="0,-232,262,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="933" >
+
+            <Image Source="/Model/Images/wel9.jpg" Height="1006" Width="496" />
+            <Image Source="/Model/Images/prof1.png" Height="120" Width="136" Margin="0 -1170 -90 0" RenderTransformOrigin="0.787,-3.675" />
+
+           
+                <StackPanel Height="46" Width="315" >
+                    <TextBlock Text="WELCOME BACK" Margin="96 -600 0 270" Foreground="Black" FontSize="25" FontStyle="Oblique" FontWeight="Heavy"  Width="300" Height="80" RenderTransformOrigin="0.721,0.12" />
+                </StackPanel>
+
+
+            
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+
+</Window>
